@@ -1,7 +1,41 @@
 %!TEX root = art-in-machine-learning.tex
 
-\section{Text Generation}%
+\section{Text Data}%
 \label{sec:text-generation}%
+
+Digital text is the first form of natural communication which involved
+computers. It is used in the form of chats, websites, on collaborative projects
+like Wikipedia, in scientific literature. Of course, it was used in pre-digital
+times, too: In newspaper, in novels, in dramas, in religious texts like the
+bible, in books for education, in notes from conversations.
+
+This list could be continued, but there are some interesting sub-categories
+which seem to be more creative than the others. And most of them are now
+available in digital form. This digital form can be used to teach machines
+to generate similar texts.
+
+The most simple language model which is of use is an $n$-gram model. This model
+makes use of sequences of the length $n$ to model language. It can be used to
+get the probability of a third word, given the previous two words. This way,
+a complete text can be generated word by word.
+
+However, there are much more sophisticated models. One of those are
+\textit{character predictors}. Those character predictors take a sequence of
+characters as input and predict the next character. Using such a predictor, one
+can generate texts character by character. If the model is good, the text can
+have the correct punctuation. This would not be possible with a word predictor.
+
+Character predictors can be implemented with \glspl{RNN}. In contrast to
+standard feed-forward neural networks like \glspl{MLP}, those networks are
+trained to take their output at some point as well as the normal input. One of
+the most common variant to implement \glspl{RNN} is by using \gls{LSTM} cells.
+
+Recurrent networks apply two main ideas in order to learn: The first is called
+\textit{unrolling} and means that an recurrent network is imagined to be
+an infinite network over time. At each time step the recurrent neurons get
+duplicated. The second idea is \textit{weight sharing} which means that those
+unrolled neurons share the same weight.
+
 
 \subsection{Similar Texts Generation}
 TODO: \href{http://karpathy.github.io/2015/05/21/rnn-effectiveness/}{http://karpathy.github.io/2015/05/21/rnn-effectiveness/}
@@ -9,4 +43,12 @@ TODO: \href{http://karpathy.github.io/2015/05/21/rnn-effectiveness/}{http://karp
 \subsection{Chatbots}%
 \label{subsec:chatbots}%
 
-TODO: \href{http://uk.businessinsider.com/google-tests-new-artificial-intelligence-chatbot-2015-6?IR=T}{http://uk.businessinsider.com/google-tests-new-artificial-intelligence-chatbot-2015-6?IR=T}
+Interesting results were obtained by~\cite{vinyals2015neural}:
+\begin{displayquote}
+\textbf{Human}: what is the purpose of life ?\\
+\textbf{Machine}: to serve the greater good .\\
+\textbf{Human}: what is the purpose of living ?\\
+\textbf{Machine}: to live forever .
+\end{displayquote}
+
+TODO: Explain how it works; make own stuff

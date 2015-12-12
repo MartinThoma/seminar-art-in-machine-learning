@@ -2,6 +2,20 @@
 % Encoding: UTF-8
 
 
+@Article{hochreiter1997long,
+  Title                    = {Long short-term memory},
+  Author                   = {Hochreiter, Sepp and Schmidhuber, J{\"u}rgen},
+  Journal                  = {Neural computation},
+  Year                     = {1997},
+  Number                   = {8},
+  Pages                    = {1735--1780},
+  Volume                   = {9},
+
+  File                     = {:/home/moose/machines-dream-paper/lstm-ContentServer.pdf:PDF},
+  Publisher                = {MIT Press},
+  Url                      = {http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=6795963}
+}
+
 @Book{Mitchell97,
   Title                    = {Machine learning},
   Author                   = {Tom M. Mitchell},
@@ -49,6 +63,24 @@
   Title                    = {GRUV: Algorithmic Music Generation using Recurrent Neural Networks},
   Author                   = {Nayebi, Aran and Vitelli, Matt},
 
+  File                     = {:/home/moose/machines-dream-paper/NayebiAran.pdf:PDF},
+  Review                   = {Authors use Recurrent Neural Networks (LTSMs to be exact) together with GRU (Gated Recurrent Units) to build a network which can be trained to generate music.
+Instead of taking notes / MIDI files, they took raw audio waveforms as input. Those audio waveforms are feature vectors given for time steps $0, 1, \dots, t-1, t$.
+The network is given those feature vectors $X_1, \dots, X_t$ and has to predict the following feature vector $X_{t+1}$. This means it continues the music.
+As the input is continous, the problem was modeled as a regression task.
+Discrete Fourier Transformation (DFT) was used on chunks of length N of the music to obtain features in the domain of the frequency.},
   Url                      = {http://cs224d.stanford.edu/reports/NayebiAran.pdf}
+}
+
+@Article{vinyals2015neural,
+  Title                    = {A neural conversational model},
+  Author                   = {Vinyals, Oriol and Le, Quoc},
+  Journal                  = {arXiv preprint arXiv:1506.05869},
+  Year                     = {2015},
+
+  Month                    = jul,
+
+  File                     = {:/home/moose/machines-dream-paper/1506.05869v2.pdf:PDF},
+  Url                      = {http://arxiv.org/abs/1506.05869v2}
 }
 
