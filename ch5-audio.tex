@@ -5,10 +5,10 @@
 
 Common machine learning tasks which involve audio data are speech recognition,
 speaker identification, identification of songs. This leads to some
-less-common, but interesting topics: The composition of music, the synthezation
+less-common, but interesting topics: The composition of music, the synthesizing
 of audio as art. While the composition might be considered in
 \cref{sec:text-generation}, we will now investigate the work which was done in
-audio synthezation.
+audio synthesization.
 
 \subsection{GRUV}
 
@@ -19,11 +19,11 @@ Nayebi and Vitelli took raw audio waveforms as input. Those audio waveforms are
 feature vectors given for time steps $0, 1, \dots, t-1, t$. The network is
 given those feature vectors $X_1, \dots, X_t$ and has to predict the following
 feature vector $X_{t+1}$. This means it continues the music. As the input is
-continous, the problem was modeled as a regression task. \Gls{DFT} was used on
+continuous, the problem was modeled as a regression task. \Gls{DFT} was used on
 chunks of length $N$ of the music to obtain features in the frequency domain.
 
 
-\subsection{Audio Synthezation}
+\subsection{Audio Synthesization}
 TODO: \href{http://gitxiv.com/posts/dQxgWraeWgvpKJXLG/musical-audio-synthesis-using-autoencoding-neural-nets}{http://gitxiv.com/posts/dQxgWraeWgvpKJXLG/musical-audio-synthesis-using-autoencoding-neural-nets}
 
 \href{http://gitxiv.com/posts/kZz9PCRcktdYSrWnp/deephear-composing-and-harmonizing-music-with-neural}{http://gitxiv.com/posts/kZz9PCRcktdYSrWnp/deephear-composing-and-harmonizing-music-with-neural}
