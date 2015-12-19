@@ -1,10 +1,8 @@
 %!TEX root = art-in-machine-learning.tex
 
-\section{Image Data}%
-\label{sec:images}%
+\section{Image Data}\label{sec:images}%
 
-\subsection{Google DeepDream}%
-\label{subsec:google-deepdream}%
+\subsection{Google DeepDream}\label{subsec:google-deepdream}%
 The gradient descent algorithm which optimizes most of the parameters in neural
 networks is well-understood. However, the effect it has on the recognition
 system is difficult to estimate. \cite{inceptionism2015} proposes a technique
@@ -27,6 +25,20 @@ will make it look more like a bird. This in turn will make the network
 recognize the bird even more strongly on the next pass and so forth, until a
 highly detailed bird appears, seemingly out of nowhere.
 \end{displayquote}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/DeepDream/Aurelia-aurita-3/Aurelia-aurita-3.jpg}
+        \label{fig:Aurelia-aurita-3-original}
+    \caption{Aurelia aurita}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/DeepDream/Aurelia-aurita-3/0099.jpg}
+        \label{fig:Aurelia-aurita-3-100}
+    \caption{DeepDream impression of Aurelia aurita}
+\end{figure}
 
 The name \enquote{Inceptionism} comes from the science-fiction movie
 \enquote{Inception}~(2010). One reason it might be chosen is because neural
@@ -54,7 +66,19 @@ TODO: Show example.
 
 
 \subsection{Artistic Style Imitation}
-In~\cite{gatys2015neural}: TODO
+A key idea of neural networks is that they learn different representations of
+the data in each layer. In the case of \glspl{CNN}, this can easily be
+visualized as it was done in various papers (TODO: Cite). Usually, one finds
+that the network learned to build edge detectors in the first layers and more
+complex structures in the upper layers.
+
+Gatys, Ecker and Bethge showed in~\cite{gatys2015neural} that with a clever
+choice of features it is possible to separate the general style of an image in
+terms of local image appearance from the content of an image. They (TODO:
+untermauern) their point by applying the style of different artists to an
+arbitrary image of their choice.
+
+This artistic style imitation can be seen itself as creative work.
 
 (TODO: Apply \href{http://gitxiv.com/posts/jG46ukGod8R7Rdtud/a-neural-algorithm-of-artistic-style}{http://gitxiv.com/posts/jG46ukGod8R7Rdtud/a-neural-algorithm-of-artistic-style} and add images)
 
