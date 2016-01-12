@@ -10,6 +10,36 @@ of audio as art. While the composition might be considered in
 \cref{sec:text-generation}, we will now investigate the work which was done in
 audio synthesization.
 
+
+\subsection{Emily Howell}
+David Cope created a project called \enquote{Experiments in Musical
+Intelligence} (short: EMI or Emmy) in 1984~\cite{Cope1987}. He introduces the idea of
+seeing music as a language which can be analyzed with natural language
+processing (NLP) methods. Cope mentions that EMI was more useful to him, when
+he used the system to \enquote{create small phrase-size textures as next
+possibilites using its syntactic dictionary and rule base}~\cite{Cope1987}.
+
+In 2003, Cope started a new project which was based on EMI: Emily
+Howell~\cite{cope2013well}. This programm is able to \enquote{creat[e] both
+highly authentic replications and novel music compositions}. The reader might
+want to listen to~\cite{Cope2012} to get an impression of the beauty of the
+created music.
+
+According to Cope, an essential part of music is \enquote{a set of instructions
+for creating different, but highly related self-replications}. Emmy was
+programmed to find this set of instructions. It tries to find the
+\enquote{signature} of a composer, which Cope describes as \enquote{contigous
+patterns that recur in two or more works of the composer}.
+
+The new feature of \textit{Emily Howell} compared to \textit{Emmy} is that
+Emily Howell does not necessarily remain in a single, already known style.
+
+Emily Howell makes use of association network. Cope emphasizes that this is not
+a form of a neural network. However, it is not clear from~\cite{cope2013well}
+how exactly an association network is trained. Cope mentions that Emily
+Howell is explained in detail in~\cite{cope2005computer}.
+
+
 \subsection{GRUV}
 
 Recurrent neural networks --- \gls{LSTM} networks, to be exact --- are used
@@ -22,11 +52,8 @@ feature vector $X_{t+1}$. This means it continues the music. As the input is
 continuous, the problem was modeled as a regression task. \Gls{DFT} was used on
 chunks of length $N$ of the music to obtain features in the frequency domain.
 
-An implementation can be found at~\cite{gruvGitHub}.
-% https://www.youtube.com/watch?v=0VTI1BBLydE - Algorithmic Music Generation
-% with Recurrent Neural Networks
-
-\href{http://gitxiv.com/posts/WEoQCj8hxHz6vPxe6/gruv-algorithmic-music-generation-using-recurrent-neural}{http://gitxiv.com/posts/WEoQCj8hxHz6vPxe6/gruv-algorithmic-music-generation-using-recurrent-neural}
+An implementation can be found at~\cite{gruvGitHub} and a demonstration can
+be found at~\cite{Vitelli2015}.
 
 
 \subsection{Audio Synthesization}
@@ -45,15 +72,8 @@ TODO: \href{https://en.wikipedia.org/wiki/0music}{https://en.wikipedia.org/wiki/
 \href{https://www.youtube.com/watch?v=-a3QsSDfUsA}{https://www.youtube.com/watch?v=-a3QsSDfUsA}
 
 
-\subsection{AARON}
-
-TODO
-
-\enquote{AARON is a software program written by artist Harold Cohen that creates original artistic images.} - source: en-wiki
-
-TODO: \href{http://artsites.ucsc.edu/faculty/cope/experiments.htm}{http://artsites.ucsc.edu/faculty/cope/experiments.htm}
-
 
 \subsection{The Generative Electronica Research Project}
 
 \href{http://metacreation.net/gerp/}{http://metacreation.net/gerp/}
+TODO: \cite{Eigenfeldt2013}
