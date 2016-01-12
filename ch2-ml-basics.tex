@@ -29,8 +29,8 @@ adjust them without having to re-program everything. Machine learning programs
 should generally improve when they are fed with more data.
 
 The field of machine learning is related to statistics. Some algorithms
-directly try to find models which are based on distribution assumptions of the
-developer, others are more general.
+directly try to find models which are based on well-known distribution
+assumptions of the developer, others are more general.
 
 A common misunderstanding of people who are not related in this field is that
 the developers don't understand what their machine learning program is doing.
@@ -44,16 +44,33 @@ could probably get the knowledge he needs to do so, but the amount of time
 required to understand such a complex system from basic building blocks is
 a time-intensive and difficult task.
 
+
+\begin{figure}
+\centering
+\subfigure[Example of an artificial neuron unit. $x_i$ are the input signals and $w_i$ are weights which have to get learned. Each input signal gets multiplied with its weight, everything gets summed up and the activation function $\varphi$ is applied.]{
+  \label{fig:artificial-neuron}
+  \includegraphics[width=0.45\linewidth]{neuron.tikz}
+}%
+\subfigure[A visualization of a simple feed-forward neural network. The 5~input nodes are red, the 2~bias nodes are gray, the 3~hidden units are green and the single output node is blue.]{
+  \label{fig:feed-forward-nn}
+  \includegraphics[width=0.45\linewidth]{feed-forward-nn.tikz}
+}
+\caption{Neural networks are based on simple units which get combined to complex networks.}
+\label{fig:neural-style}
+\end{figure}
+
 An important group of machine learning algorithms was inspired by biological
 neurons and are thus called \textit{artificial neural networks}. Those networks
 are based on mathematical functions called \textit{artificial neurons} which
 take $n \in \mathbb{N}$ numbers $x_1, \dots, x_n \in \mathbb{R}$ as input,
 multiply them with weights $w_1, \dots, w_n \in \mathbb{R}$, add them and apply
-a so called \textit{activation function} $\varphi$. One example of such a
-function is the sigmoid function $\varphi(x) = \frac{1}{1+e^{-x}}$. Those
-functions act as building blocks for more complex systems as they can be
-chained and grouped in layers. The interesting question is how the parameters
-$w_i$ are learned. This is usually done by an optimization technique called
+a so called \textit{activation function} $\varphi$ as visualized in
+\cref{fig:artificial-neuron}. One example of such an activation function is the
+sigmoid function $\varphi(x) = \frac{1}{1+e^{-x}}$. Those functions act as
+building blocks for more complex systems as they can be chained and grouped in
+layers as visualized in \cref{fig:feed-forward-nn}. The interesting question is
+how the parameters $w_i$ are learned. This is usually done by an optimization
+technique called
 \textit{gradient descent}. The gradient descent algorithm takes a function
 which has to be derivable, starts at any point of the surface of this error
 function and makes a step in the direction which goes downwards. Hence it tries
