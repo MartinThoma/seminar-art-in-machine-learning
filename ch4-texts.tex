@@ -9,10 +9,9 @@ like Wikipedia, in scientific literature. Of course, it was used in pre-digital
 times, too: In newspaper, in novels, in dramas, in religious texts like the
 bible, in books for education, in notes from conversations.
 
-This list could be continued, but there are some interesting sub-categories
-which seem to be more creative than the others. And most of them are now
-available in digital form. This digital form can be used to teach machines
-to generate similar texts.
+This list could be continued and most of these kinds of texts are now available
+in digital form. This digital form can be used to teach machines to generate
+similar texts.
 
 The most simple language model which is of use is an $n$-gram model. This model
 makes use of sequences of the length $n$ to model language. It can be used to
@@ -29,10 +28,11 @@ model is good, the text can have the correct punctuation. This would not be
 possible with a word predictor.
 
 Character predictors can be implemented with \glspl{RNN}. In contrast to
-standard feed-forward neural networks like \glspl{MLP}, those networks are
-trained to take their output at some point as well as the normal input. One of
-the most common variant to implement \glspl{RNN} is by using so called
-\gls{LSTM} cells~\cite{hochreiter1997long}.
+standard feed-forward neural networks like \glspl{MLP} which was shown in
+\cref{fig:feed-forward-nn}, those networks are trained to take their output at
+some point as well as the normal input. This means they can keep some
+information over time. One of the most common variant to implement \glspl{RNN}
+is by using so called \gls{LSTM} cells~\cite{hochreiter1997long}.
 
 Recurrent networks apply two main ideas in order to learn: The first is called
 \textit{unrolling} and means that an recurrent network is imagined to be
