@@ -87,9 +87,20 @@ This artistic style imitation can be seen itself as creative work.
 
 TODO: \cite{shih2014style} \href{http://gitxiv.com/posts/eoxDf59kBz87tvkX3/style-transfer-for-headshot-portraits}{http://gitxiv.com/posts/eoxDf59kBz87tvkX3/style-transfer-for-headshot-portraits}
 
+
 \subsection{Drawing Robots}
-Patrick Tresset's Robots
+Patrick Tresset and Frédéric Fol Leymarie created a system called AIKON
+(Automatic IKONic drawing) which can automatically generated sketches for
+portraits~\cite{tresset2005generative}. AIKON takes a digital photograph,
+detects faces on them and sketches them with a pen-plotter.
 
-\subsection{Others}
+Tresset and Leymaire use $k$-means clustering~\cite{1017616} to segment regions
+of the photograph with similar color which, in turn, will get a similar
+shading.
 
-TODO: \href{http://www.thepaintingfool.com/}{http://www.thepaintingfool.com/}
+Such a drawing robot could apply machine learning techniques known from
+computer vision for detecting the human. It could apply self-learning
+techniques to draw results most similar to the artists impression of the image.
+However, the system described in~\cite{tresset2005generative} seems not to be a
+machine learning computer program according to the definition by Tom
+Mitchell~\cite{Mitchell97}.
