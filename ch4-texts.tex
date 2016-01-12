@@ -16,19 +16,23 @@ to generate similar texts.
 
 The most simple language model which is of use is an $n$-gram model. This model
 makes use of sequences of the length $n$ to model language. It can be used to
-get the probability of a third word, given the previous two words. This way,
-a complete text can be generated word by word.
+get the probability of a third word, given the previous two words. This way, a
+complete text can be generated word by word. Refinements and extensions to this
+model are discussed in the field of \gls{NLP}.
 
 However, there are much more sophisticated models. One of those are
-\textit{character predictors}. Those character predictors take a sequence of
-characters as input and predict the next character. Using such a predictor, one
-can generate texts character by character. If the model is good, the text can
-have the correct punctuation. This would not be possible with a word predictor.
+\textit{character predictors} based on \glspl{RNN}. Those character predictors
+take a sequence of characters as input and predict the next character. In that
+sense they are similar to the $n$-gram model, but operate on a lower level.
+Using such a predictor, one can generate texts character by character. If the
+model is good, the text can have the correct punctuation. This would not be
+possible with a word predictor.
 
 Character predictors can be implemented with \glspl{RNN}. In contrast to
 standard feed-forward neural networks like \glspl{MLP}, those networks are
 trained to take their output at some point as well as the normal input. One of
-the most common variant to implement \glspl{RNN} is by using \gls{LSTM} cells.
+the most common variant to implement \glspl{RNN} is by using so called
+\gls{LSTM} cells~\cite{hochreiter1997long}.
 
 Recurrent networks apply two main ideas in order to learn: The first is called
 \textit{unrolling} and means that an recurrent network is imagined to be
@@ -38,7 +42,29 @@ unrolled neurons share the same weight.
 
 
 \subsection{Similar Texts Generation}
-TODO: \href{http://karpathy.github.io/2015/05/21/rnn-effectiveness/}{http://karpathy.github.io/2015/05/21/rnn-effectiveness/}
+Karpathy trained multiple character \glspl{RNN} on different datasets and gave
+an excellent introduction~\cite{Karpathy2015}. He trained it on Paul Graham's
+essays, all the works of Shakespeare, the Hutter Prize~\cite{hutterPrize}
+\SI{100}{\mega\byte}~dataset of raw Wikipedia articles, the raw \LaTeX{} source
+file of a book about algebraic stacks and geometry and Linux C~code.
+
+With that training data, the models can generate similar texts. New works which
+look like Shakespeare plays, new Wikipedia articles, new Linux code and new
+papers about algebraic geometry can thus autmatically be generated. At a first
+glance, they do look authentic. The syntax was mostly used correctly, the
+formatting looks as expected, the sentences are gramatically correct. However,
+when one looks at the broader context it is easy to recognize that the
+algorithm has no insight in what it is doing. It does match patterns really
+well, but it fails to follow a central theme. In the context of C~code this
+means that new variables are introduced, but not used. At the same time,
+variables which were not declared are used. In the context of Shakespear plays
+this means that a lot of new characters are introduced, but they don't speak
+with each other or about each other.
+
+The code used to generate these examples is available and ready to use
+through~\cite{charRNNgithub}. A couple of examples are
+in~\cref{sec:appendix-auto-generated-text}.
+
 
 \subsection{Chatbots}%
 \label{subsec:chatbots}%
