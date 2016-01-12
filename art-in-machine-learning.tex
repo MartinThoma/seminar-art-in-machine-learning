@@ -1,5 +1,7 @@
 \documentclass[technote,a4paper,leqno]{IEEEtran}
 \pdfoutput=1
+% \documentclass{article}
+% \usepackage[titletoc,toc,title]{appendix}
 \usepackage{amssymb, amsmath}
 
 % \usepackage[a-1b]{pdfx}  % Not supported by arxiv
@@ -27,9 +29,8 @@
 \usepackage{wasysym}
 \usepackage[symbol]{footmisc}
 \usepackage{float}
-% \usepackage{caption}
-% \usepackage{subcaption}
-\usepackage{subfig}
+\usepackage{caption}
+\usepackage[hang]{subfigure}
 \makeatletter
 \newcommand\mynobreakpar{\par\nobreak\@afterheading}
 \makeatother
@@ -45,6 +46,7 @@
 
 \title{Creativity in Machine Learning}
 \author{%
+    %Martin Thoma
     \IEEEauthorblockN{Martin Thoma}\\
     \IEEEauthorblockA{E-Mail: info@martin-thoma.de} % ORCID: http://orcid.org/0000-0002-6517-1690
 }
@@ -75,7 +77,7 @@
 
 \bibliographystyle{IEEEtranSA}
 \bibliography{art-in-machine-learning}
-%\printglossary
+\printglossary
 
 \input{appendix}
 \end{document}

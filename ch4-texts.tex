@@ -50,9 +50,9 @@ file of a book about algebraic stacks and geometry and Linux C~code.
 
 With that training data, the models can generate similar texts. New works which
 look like Shakespeare plays, new Wikipedia articles, new Linux code and new
-papers about algebraic geometry can thus autmatically be generated. At a first
+papers about algebraic geometry can thus automatically be generated. At a first
 glance, they do look authentic. The syntax was mostly used correctly, the
-formatting looks as expected, the sentences are gramatically correct. However,
+formatting looks as expected, the sentences are grammatically correct. However,
 when one looks at the broader context it is easy to recognize that the
 algorithm has no insight in what it is doing. It does match patterns really
 well, but it fails to follow a central theme. In the context of C~code this
@@ -69,12 +69,34 @@ in~\cref{sec:appendix-auto-generated-text}.
 \subsection{Chatbots}%
 \label{subsec:chatbots}%
 
-Interesting results were obtained by~\cite{vinyals2015neural}:
+Chatbots are computer programs which participate in chat rooms as autonomous
+agents. This means they have similar permissions and possibilities as usual human
+users have, but users can trigger a set of commands to make the bot give them
+valuable information or features.
+
+A special category of chatbots are such bots which actively participate in the
+conversation, which is usually not the case. One of the earliest programs in
+this category is ELIZA, a bot created by Joseph Weizenbaum in the
+1960s~\cite{Weizenbaum1976}. This program had a set of patterns implemented to
+which it would reply in a seemingly smart way in a psychologists fashion. This
+means quite often the program would simply repeat the last sentence and add
+something meaningless like \enquote{How do you feel about it?}. According
+to~\cite{Curtis2014}, Weizenbaum once found his secretary --- who was aware of
+the fact that this is a computer program --- chatting with the machine. When he
+looked over her shoulder, she asked him \enquote{would you mind leaving the
+room}.
+
+Today, much more sophisticated chatbots exist. They make use of the vast amount
+of data which is available by millions of Wikipedia articles, chat protocols,
+websites, help desk protocols, subtitles of movies as well as the astonishing
+increase in computing power to train
+\glspl{RNN} and language models similar to the ones described before.
+
+Interesting results like the following were obtained
+by~\cite{vinyals2015neural}:
 \begin{displayquote}
 \textbf{Human}: what is the purpose of life ?\\
 \textbf{Machine}: to serve the greater good .\\
 \textbf{Human}: what is the purpose of living ?\\
 \textbf{Machine}: to live forever .
 \end{displayquote}
-
-TODO: Explain how it works; make own stuff
