@@ -7,3 +7,9 @@
   be in the image part. However, there was too little time for it and the
   ideas are too complex for this course.
 * Latent image space due to a lack of time and as it is too complicated.
+
+
+## Multimedia
+
+* https://youtu.be/oyxSerkkP4o - DeepDream Video
+* http://psychic-vr-lab.com/deepdream/
