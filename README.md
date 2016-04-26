@@ -13,3 +13,19 @@
 
 * https://youtu.be/oyxSerkkP4o - DeepDream Video
 * http://psychic-vr-lab.com/deepdream/
+
+
+## Software
+
+* https://github.com/auduno/deepdraw - for Caffee
+
+
+## Papers
+
+* [Combining Markov Random Fields and Convolutional Neural Networks for Image Synthesis](http://arxiv.org/pdf/1601.04589v1.pdf)
+  - http://gitxiv.com/posts/DtC4Zwz3kqCDBHFD7/combining-markov-random-fields-and-convolutional-neural
+* [Understanding deep features with computer-generated imagery ](http://gitxiv.com/posts/rCzAPjX5iCXT5E6cz/understanding-deep-features-with-computer-generated-imagery)
+
+## See also
+
+* http://mtyka.github.io/code/2015/09/07/generative-nns.html
